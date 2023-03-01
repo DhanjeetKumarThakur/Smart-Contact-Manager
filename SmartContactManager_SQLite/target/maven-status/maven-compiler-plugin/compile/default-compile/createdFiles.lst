@@ -1,0 +1,7 @@
+com\smart\config\MyConfig.class
+com\smart\controllers\HomeController.class
+com\smart\dao\UserRepository.class
+com\smart\SmartContactManagerSqLiteApplication.class
+com\smart\helper\Message.class
+com\smart\entities\User.class
+com\smart\entities\Contact.class

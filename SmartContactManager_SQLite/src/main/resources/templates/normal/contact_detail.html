@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/Base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>About Page</title>
+</head>
+<body>
+	<section>
+		<div class="card mr-3 ml-3" th:if="${contact}">
+			
+			<div class="card-body text-center" >
+			
+				<div class="container ">
+					<img class="" style="height: 200px; width: 200px; border-radius:50%; border:2px solid black;" alt="Profile Image" th:src="@{'/img/'+${contact.image}}" th:title="${contact.name}"/>
+					<h1 class="mt-3"> <span th:text="${contact.name}"></span>( <span th:text="${contact.secondName}"></span> ) </h1>
+				</div>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#ID</th>
+							<th scope="col">SCMUSER<span th:text="${contact.cId}"></span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Email</th>
+							<td><span th:text="${contact.email}"></span></td>
+							
+						</tr>
+						<tr>
+							<th scope="row">Phone</th>
+							<td><span th:text="${contact.phone}"></span></td>
+							
+						</tr>
+						<tr>
+							<th scope="row">Work</th>
+							<td><span th:text="${contact.work}"></span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+					<div class="description">
+						<th:block> <span th:utext="${contact.description}"></span></th:block>
+					</div>
+					
+					<div class="container mt-3">
+						<!-- By default anchor tag are use for GetMapping  -->
+						<a th:href="@{'/user/delete/'+${contact.cId}}" class="btn btn-danger btn-block">Delete</a>
+						
+						<!-- form tag because we are using PostMapping for update -->
+						<form th:action="@{'/user/update-contact/'+${contact.cId}}" method="post">
+				      		<button class="btn btn-success btn-block mt-2" type="submit">Update</button>
+				      	</form>
+					</div>
+			</div>
+			
+		</div>
+		<div th:unless="${contact}" class="bg-danger text-white text-center">
+				<h1> You don't have Permission to see this contact</h1>
+			</div>
+	</section>
+</body>
+</html>

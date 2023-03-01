@@ -1,0 +1,26 @@
+Google ---- bean validation maven
+Google ---- hibernate validator maven
+
+Smart Contact Manager
+---------------------
+ER diagram 
+site : draw.io
+flaticon ---for icons
+bootsnipp.com ---for bootstrap login form
+-----------------------------------------
+		Spring Security
+Step 1: implementing the UserDetails --> here we configure the Authorities of User
+Step 2: implementing the UserDetailsService ---> Check whether the User is present in DB or not
+					then we simply pass the User to the implemented Class of UserDetail
+Step 3:  Security Configuration Class with all Configuration --> A Simple Class that extends 
+								 WebSecurityConfigurerAdapter
+
+userid :test@gmail.com
+password : 123456
+
+userid: test1@gmail.com
+password: 741852
+
+https://fontawesome.com/search?q=setting&s=brands%2Clight%2Cduotone%2Cregular
+
+https://www.youtube.com/watch?v=b5a0LmKc2Zc&list=PL0zysOflRCelmjxj-g4jLr3WKraSU_e8q&index=53
